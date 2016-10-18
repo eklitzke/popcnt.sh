@@ -17,10 +17,10 @@ popcnt() {
     declare -i x="$1"
     declare -i c=0
     while [ $x -ne 0 ]; do
-        if [ $(($x & 1)) -eq 1 ]; then
-            c=$(($c + 1))
+        if [ $((x & 1)) -eq 1 ]; then
+            ((c++))
         fi
-        x=$(($x >> 1))
+        x=$((x >> 1))
     done
     echo $c
 }
