@@ -14,8 +14,8 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 popcnt() {
-    local x="$1"
-    local c=0
+    declare -i x="$1"
+    declare -i c=0
     while [ $x -ne 0 ]; do
         if [ $(($x & 1)) -eq 1 ]; then
             c=$(($c + 1))
